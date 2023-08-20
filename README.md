@@ -11,7 +11,7 @@ Technologies Used ::
 Cloud 9 | AWS ECR | AWS LAMBDA | LLAMA2 | GGMl | CTRANSFORMERS
 ```
 
-Steps ::
+Steps (Cloud9 IDE) ::
 ```
   aws ecr create-repository --repository-name llama2_ggml_lambda --image-scanning-configuration scanOnPush=true --image-tag-mutability MUTABLE
 
