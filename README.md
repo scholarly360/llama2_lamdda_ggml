@@ -12,7 +12,7 @@ Cloud 9 | AWS ECR | AWS LAMBDA | LLAMA2 | GGMl | CTRANSFORMERS
 ```
 
 Steps ::
-
+```
   aws ecr create-repository --repository-name llama2_ggml_lambda --image-scanning-configuration scanOnPush=true --image-tag-mutability MUTABLE
 
   aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 99149806775309.dkr.ecr.us-east-1.amazonaws.com
@@ -27,7 +27,7 @@ Steps ::
   llama2_ggml_lambda is the name of image
   99149806775309 is account number (Masked for Security Reasons)
   us-east-1 is region
-
+```
 
 
 Examples ::
