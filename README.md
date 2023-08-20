@@ -1,17 +1,17 @@
 # llama2_lamdda_ggml
 Deploying Llama2 (GGML) on AWS Lambda
 
-Description ::
+## Description
 ```
 Most Cost Effective, Just In Time way to use Llama2 on AWS Lambda for Serverless Computing
 ```
 
-Technologies Used ::
+## Technologies Used 
 ```
 Cloud 9 | AWS ECR | AWS LAMBDA | LLAMA2 | GGMl | CTRANSFORMERS
 ```
 
-Steps (Cloud9 IDE) ::
+## Steps (Cloud9 IDE)
 ```
   aws ecr create-repository --repository-name llama2_ggml_lambda --image-scanning-configuration scanOnPush=true --image-tag-mutability MUTABLE
 
@@ -29,8 +29,17 @@ Steps (Cloud9 IDE) ::
   us-east-1 is region
 ```
 
+## Steps (Lambda Console)
+```
+  Create a New Lambda Function (Specify ECR Image)
 
-Examples ::
+  Change Configurations
+	Memory : 10240MB
+	Ephemeral storage : 10240MB
+	Timeout : 5min
+```
+
+## Examples 
 ```
 {"context": "RIL Q1 Results: Net profit falls 10% to ₹16,011 cr as O2C biz offsets overall growth; retail, telecom arms thrive",
 "question" : "What is Net Profit "}
@@ -48,7 +57,7 @@ Examples ::
 }
 ```
 
-Reference ::
+## Reference 
 ```
 https://docs.aws.amazon.com/prescriptive-guidance/latest/patterns/deploy-lambda-functions-with-container-images.html
 https://docs.aws.amazon.com/lambda/latest/dg/python-image.html
